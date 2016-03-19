@@ -3,6 +3,7 @@ package com.daasuu.easinginterpolator;
 import android.animation.ObjectAnimator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.daasuu.ei.Ease;
@@ -15,14 +16,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView textView = (TextView) findViewById(R.id.txt_hello);
+        LinearLayout flowLayout = (LinearLayout) findViewById(R.id.layout_flow);
 
-        ObjectAnimator animator = ObjectAnimator.ofFloat(
-                textView, "translationX", 0, 600);
-
-        animator.setDuration(2000)
-                .setInterpolator(new EasingInterpolator(Ease.ELASTIC_IN_OUT));
-        animator.start();
-
+        for (Ease ease : Ease.values()) {
+            flowLayout.addView(new EasingGraphView(this, ease));
+        }
     }
 }

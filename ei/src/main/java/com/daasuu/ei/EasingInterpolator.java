@@ -19,4 +19,8 @@ public class EasingInterpolator implements TimeInterpolator {
     public float getInterpolation(float input) {
         return EasingProvider.get(this.ease, input);
     }
+
+    public Ease getEase() {
+        return ease;
+    }
 }

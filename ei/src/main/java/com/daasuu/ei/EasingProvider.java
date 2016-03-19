@@ -15,7 +15,7 @@ class EasingProvider {
     public static float get(@NonNull Ease ease, float elapsedTimeRate) {
         switch (ease) {
             case LINEAR:
-                return 1f;
+                return elapsedTimeRate;
             case QUAD_IN:
                 return getPowIn(elapsedTimeRate, 2);
             case QUAD_OUT:
@@ -80,7 +80,7 @@ class EasingProvider {
                 return getElasticInOut(elapsedTimeRate, 1, 0.45);
 
             default:
-                return 1f;
+                return elapsedTimeRate;
 
         }
 
