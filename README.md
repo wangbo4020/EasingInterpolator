@@ -4,10 +4,6 @@
 Twenty-eight different easing animation interpolators for Android.<br>
 It does not use the standard 4 param ease signature. Instead it uses a single param which indicates the current linear ratio (0 to 1) of the tween. 
 
-<img src="art/easing1.png" width="100%">
-<img src="art/easing2.png" width="100%">
-<img src="art/easing3.png" width="66%">
-
 # Gradle
 Add the dependency to your build.gradle.
 ```
@@ -15,7 +11,21 @@ dependencies {
     compile 'com.daasuu:EasingInterpolator:1.0.0'
 }
 ```
+# Usage
+```JAVA
 
+	ValueAnimator valueAnimator = new ValueAnimator();
+    valueAnimator.setInterpolator(new EasingInterpolator(Ease.CUBIC_IN));
+    valueAnimator.start();
+
+	ObjectAnimator animator = ObjectAnimator.ofFloat(view, "translationY", 0, 300);
+	animator.setInterpolator(new EasingInterpolator(Ease.ELASTIC_IN_OUT)));
+	animator.start();
+
+```
+# Easing Graphs
+<img src="art/easing.png" width="100%">
+<img src="art/FPSAnimator1.gif" width="70%">
 
 ## License
 
