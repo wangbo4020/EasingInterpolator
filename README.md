@@ -2,7 +2,7 @@
 [![Platform](https://img.shields.io/badge/platform-android-green.svg)](http://developer.android.com/index.html)
 <img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat">
 [![API](https://img.shields.io/badge/API-14%2B-yellow.svg?style=flat)](https://android-arsenal.com/api?level=14)
-
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-EasingInterpolator-green.svg?style=true)](http://android-arsenal.com/details/1/3300)
 
 Twenty-eight different easing animation interpolators for Android.<br>
 It does not use the standard 4 param ease signature. Instead it uses a single param which indicates the current linear ratio (0 to 1) of the tween. 
