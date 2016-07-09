@@ -30,7 +30,6 @@ dependencies {
 <img src="art/easing.png" width="100%">
 <img src="art/FPSAnimator1.gif" width="70%">
 
-Logic of this easing is equal to [FPSAnimator](https://github.com/MasayukiSuda/FPSAnimator).
 
 ## License
 
