@@ -30,6 +30,10 @@ dependencies {
 <img src="art/easing.png" width="100%">
 <img src="art/FPSAnimator1.gif" width="70%">
 
+# ProGuard
+```
+-keep class com.daasuu.** { *; }
+```
 
 ## License
 
