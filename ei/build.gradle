@@ -1,37 +1,24 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion COMPILE_SDK_VERSION as int
-    buildToolsVersion BUILD_TOOLS_VERSION
+    compileSdkVersion 27
 
     defaultConfig {
-        minSdkVersion COMPILE_MIN_SDK_VERSION as int
-        targetSdkVersion COMPILE_SDK_VERSION as int
-        versionCode VERSION_CODE as int
-        versionName VERSION_NAME
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 1
+        versionName '1.0'
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'proguard-rules.pro'
         }
-    }
-    lintOptions {
-        abortOnError false
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.3.1'
-}
-
-publish {
-    userOrg = USER_ID
-    groupId = GROUP
-    artifactId = ARTIFACT_NAME
-    publishVersion = VERSION_NAME
-    desc = ARTIFACT_DESCRIPTION
-    website = SITE_URL
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:support-annotations:27.1.1'
 }
